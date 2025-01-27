@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze Supplier Quotes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-6xl mx-auto py-10">
+        <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">Analyze Supplier Quotes</h1>
+
+        <!-- Ranked Quotes Section -->
+        <h2 class="text-2xl font-semibold mb-4 text-gray-700">Ranked Quotes</h2>
+        <table class="w-full table-auto border-collapse border border-gray-300 shadow-md">
+            <thead class="bg-gray-200">
+                <tr>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Rank</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Supplier Name</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Price Per Unit</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Delivery Date</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Additional Terms</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Score</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Explanation</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for rank, quote in enumerate(analysis["ranked_quotes"], start=1) %}
+                <tr class="hover:bg-gray-100">
+                    <td class="border border-gray-300 px-4 py-2">{{ rank }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ quote["supplier_name"] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">${{ quote["price_per_unit"] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ quote["delivery_date"] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ quote["additional_terms"] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ quote["score"] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ quote["explanation"] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- AI Insights Section -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-700">AI Insights</h2>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2 text-gray-600">Trends</h3>
+                <ul class="list-disc pl-6 text-gray-700">
+                    {% for trend in analysis["ai_insights"]["trends"] %}
+                    <li>{{ trend }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2 text-gray-600">Risks</h3>
+                <ul class="list-disc pl-6 text-gray-700">
+                    {% for risk in analysis["ai_insights"]["risks"] %}
+                    <li>{{ risk }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2 text-gray-600">Optimizations</h3>
+                <ul class="list-disc pl-6 text-gray-700">
+                    {% for optimization in analysis["ai_insights"]["optimizations"] %}
+                    <li>{{ optimization }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2 text-gray-600">Sustainability</h3>
+                <ul class="list-disc pl-6 text-gray-700">
+                    {% for sustainability in analysis["ai_insights"]["sustainability"] %}
+                    <li>{{ sustainability }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

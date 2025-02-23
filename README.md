@@ -1,97 +1,157 @@
 # agenttest
 To create conversational ai
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Create Sourcing Project - BidGenius</title>
+  <title>Compare Events - AI Insights</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
   <style>
-    /* Hero section styling for an enterprise look */
-    .hero {
-      background: #f8f9fa url("https://via.placeholder.com/1600x400/cccccc/ffffff?text=Tender+Background") no-repeat center center;
-      background-size: cover;
-      padding: 80px 0;
-      margin-bottom: 30px;
+    .card-header h5 {
+      font-weight: 600;
     }
-    .hero-text {
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 20px 30px;
-      border-radius: 10px;
-      display: inline-block;
+    /* Loading overlay styling */
+    #loadingOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.95);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    #loadingOverlay h3 {
+      margin-top: 20px;
+      font-size: 1.5em;
+      color: #007bff;
     }
   </style>
+  <script>
+    function toggleInsights(uniqueId) {
+      var block = document.getElementById('insights-' + uniqueId);
+      var arrowBtn = document.getElementById('arrow-btn-' + uniqueId);
+      if (block.style.display === 'none') {
+         block.style.display = 'block';
+         arrowBtn.innerHTML = '▲';
+      } else {
+         block.style.display = 'none';
+         arrowBtn.innerHTML = '▼';
+      }
+    }
+    
+    // Use window.onload to hide the loading overlay after a forced delay
+    window.addEventListener("load", function() {
+      setTimeout(function(){
+        var overlay = document.getElementById("loadingOverlay");
+        if (overlay) {
+          overlay.style.display = "none";
+        }
+      }, 1000); // Force overlay to be visible for at least 1 second
+    });
+  </script>
 </head>
 <body>
+  <!-- Loading Overlay -->
+  <div id="loadingOverlay">
+    <div class="spinner-border text-primary" role="status" style="width: 4rem; height: 4rem;">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <h3>Based on your event details, we're analyzing historical data to find the best matching events and generate comprehensive AI insights. Please wait...".</h3>
+  </div>
+
   <!-- Navbar with SAP Logo -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/150px-SAP_2011_logo.svg.png" 
-             alt="SAP Logo" height="40">
+      <a class="navbar-brand" href="{{ url_for('createsourcing') }}">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/150px-SAP_2011_logo.svg.png" alt="SAP Logo" height="40">
         BidGenius
       </a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <div class="hero text-center">
-    <div class="hero-text">
-      <h1 class="display-5 fw-bold">Create Sourcing Project</h1>
-      <p class="lead">Kick off your tender project and let AI power your insights.</p>
-    </div>
+  <div class="container mt-4">
+      <h2 class="mb-4">Similar Sourcing Events by BidGenius</h2>
+      <div class="mb-3">
+        <p><strong>Description:</strong> {{ form_data.get('description','') }}</p>
+        <p><strong>Project Type:</strong> {{ form_data.get('project_type','Single Event') }}</p>
+        <p><strong>Commodity:</strong> {{ form_data.get('commodity','') }}</p>
+      </div>
+
+      <hr>
+      <h3 class="mb-3">AI Insights for Events</h3>
+      {% for event in events %}
+      <div class="card mb-3 shadow-sm">
+          <div class="card-header d-flex justify-content-between align-items-center bg-light">
+              <h5 class="mb-0">{{ event.Title if event.Title else event.EventID }}</h5>
+              <!-- Unique ID to avoid conflicts -->
+              <button id="arrow-btn-{{ loop.index }}-{{ event.EventID }}" 
+                      class="btn btn-sm btn-info"
+                      onclick="toggleInsights('{{ loop.index }}-{{ event.EventID }}')"
+                      style="width: 40px;">
+                ▼
+              </button>
+          </div>
+          <div class="card-body">
+              <div id="insights-{{ loop.index }}-{{ event.EventID }}" style="display: none;">
+                  {% if event.ai_data %}
+                  <p><strong>Score:</strong> {{ event.ai_data.score }}</p>
+                  <p><strong>Reason:</strong> {{ event.ai_data.reason }}</p>
+                  <p><strong>Explanation:</strong> {{ event.ai_data.explanation }}</p>
+                  <p><strong>Match Score:</strong> {{ event.ai_data.match_score }}</p>
+                  <p><strong>Region:</strong> {{ event.ai_data.region }}</p>
+                  <p><strong>Risks:</strong> {{ event.ai_data.risks }}</p>
+                  <hr>
+                  <h6>Extended AI Insights</h6>
+                  <p><strong>Trends:</strong> {{ event.ai_data.ai_insights.trends|join(', ') }}</p>
+                  <p><strong>Optimizations:</strong> {{ event.ai_data.ai_insights.optimizations|join(', ') }}</p>
+                  {% else %}
+                  <p>No AI insights available for this event.</p>
+                  {% endif %}
+              </div>
+              <a href="{{ url_for('event_details', event_id=event.EventID) }}" class="btn btn-success mt-2">Add</a>
+          </div>
+      </div>
+      {% endfor %}
+      <hr>
+
+      <h4>AI (Global) Insights</h4>
+      <ul class="nav nav-tabs" id="globalInsightsTab" role="tablist">
+          <li class="nav-item" role="presentation">
+             <button class="nav-link active" id="trends-tab" data-bs-toggle="tab" data-bs-target="#globalTrends" type="button" role="tab">
+               Trends
+             </button>
+          </li>
+          <li class="nav-item" role="presentation">
+             <button class="nav-link" id="risks-tab" data-bs-toggle="tab" data-bs-target="#globalRisks" type="button" role="tab">
+               Risks
+             </button>
+          </li>
+          <li class="nav-item" role="presentation">
+             <button class="nav-link" id="optimizations-tab" data-bs-toggle="tab" data-bs-target="#globalOptimizations" type="button" role="tab">
+               Optimizations
+             </button>
+          </li>
+      </ul>
+      <div class="tab-content mt-3">
+          <div id="globalTrends" class="tab-pane fade show active" role="tabpanel">
+             <p>{{ global_insights.trends|join(', ') }}</p>
+          </div>
+          <div id="globalRisks" class="tab-pane fade" role="tabpanel">
+             <p>{{ global_insights.risks|join(', ') }}</p>
+          </div>
+          <div id="globalOptimizations" class="tab-pane fade" role="tabpanel">
+             <p>{{ global_insights.optimizations|join(', ') }}</p>
+          </div>
+      </div>
   </div>
 
-  <!-- Form Section -->
-  <div class="container mb-5">
-    <h2 class="mb-4">Enter Tender Details</h2>
-    <!-- This form sends data to /generate_project (your existing backend) -->
-    <form id="sourcingForm" action="{{ url_for('generate_project') }}" method="post" class="bg-light p-4 rounded shadow">
-      <div class="mb-3">
-        <label for="project_name" class="form-label fw-semibold">Project Name</label>
-        <input type="text" class="form-control" id="project_name" name="project_name" placeholder="Enter project name">
-      </div>
-      <div class="mb-3">
-        <label for="description" class="form-label fw-semibold">Project Description</label>
-        <input type="text" class="form-control" id="description" name="description" placeholder="Enter project description">
-      </div>
-      <div class="row mb-3">
-        <div class="col-md-4">
-          <label for="commodity" class="form-label fw-semibold">Commodity</label>
-          <input type="text" class="form-control" id="commodity" name="commodity" placeholder="e.g., Electronics">
-        </div>
-        <div class="col-md-4">
-          <label for="contract_effective_date" class="form-label fw-semibold">Contract Effective Date</label>
-          <input type="date" class="form-control" id="contract_effective_date" name="contract_effective_date">
-        </div>
-        <div class="col-md-4">
-          <label for="currency" class="form-label fw-semibold">Currency</label>
-          <input type="text" class="form-control" id="currency" name="currency" placeholder="e.g., USD">
-        </div>
-      </div>
-      <!-- (Include additional fields as needed) -->
-      <button type="button" class="btn btn-primary px-4 py-2" onclick="openInNewWindow()">
-        Generate Similar Sourcing Project
-      </button>
-    </form>
-  </div>
-
-  <!-- Footer -->
-  <footer class="bg-dark text-center text-white py-3">
-    <small>&copy; 2025 BidGenius. All rights reserved.</small>
+  <footer class="bg-dark text-center text-white py-3 mt-5">
+      <small>&copy; 2025 BidGenius. All rights reserved.</small>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function openInNewWindow() {
-      var form = document.getElementById("sourcingForm");
-      // Set the form target to a new window (named "newWindow")
-      form.target = "newWindow";
-      // Open a new window with desired dimensions (adjust as needed)
-      window.open("", "newWindow", "width=900,height=700");
-      // Submit the form; the backend processes the data and returns compareEvents.html
-      form.submit();
-    }
-  </script>
 </body>
 </html>

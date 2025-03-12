@@ -1,0 +1,28 @@
+{
+    "location": ["Multiple Locations, United States"],
+    "experience": [
+        {
+            "years": "8",
+            "education_level": "Bachelor's or Master's or Doctorate",
+            "skills": ["Machine Learning", "NLP", "Research", "Leadership"]
+        }
+    ],
+    "skills": [
+        "AI",
+        "Machine Learning",
+        "Natural Language Processing",
+        "Management",
+        "Data Science"
+    ],
+    "education": [
+        {
+            "degree": "Bachelor's",
+            "abbreviation": "BSc",
+            "fields": ["Computer Science", "Econometrics"],
+            "specific_qualifications": [],
+            "other_education_related_info": ""
+        }
+    ],
+    "certifications": [],
+    "languages": ["English"]
+}

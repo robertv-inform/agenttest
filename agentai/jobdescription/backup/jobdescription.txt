@@ -1,0 +1,18 @@
+Job Title: Data Scientist
+
+Location: Multiple Locations (e.g., Bengaluru, Chennai, Berlin, Paris)
+
+Job Description:
+
+We are seeking a Data Scientist with a minimum of 2 years of experience in data science and at least 2 years of hands-on experience with Python. The ideal candidate should hold a Master’s degree in Computer Science, Data Science, or a related field. The role involves developing predictive models, analyzing data, and supporting business intelligence initiatives.
+
+Minimum Requirements:
+
+Master’s degree in Computer Science, Data Science, or a related field.
+At least 2 years of experience in data science.
+Minimum of 2 years of experience in Python programming.
+Proficient in machine learning, data analysis, and predictive modeling.
+Strong problem-solving skills and ability to work with large datasets.
+How to Apply:
+
+Interested candidates, please submit your resume to [resume@bestrun.com].

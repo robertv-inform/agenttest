@@ -1,0 +1,101 @@
+Director of Applied Science
+
+Multiple Locations, United States
+
+Save
+
+Share job
+Date posted
+Mar 07, 2025
+Job number
+1812844
+Work site
+Up to 50% work from home
+Travel
+0-25 %
+Role type
+People Manager
+Profession
+Research, Applied, & Data Sciences
+Discipline
+Applied Sciences
+Employment type
+Full-Time
+Overview
+
+The IDEAS Applied Science team utilizes large scale interaction data to enhance our understanding of AI-enabled productivity systems and develop innovations to improve their performance. This includes work on human-AI collaboration, evaluation and measurement, data generation, fine tuning, and alignment. We work closely with product teams across Microsoft to drive cutting edge research that will define the future of AI systems and productivity. 
+
+ 
+
+We are looking for a Director of Applied Science who has a proven ability to conduct high impact scientific research and to lead multidisciplinary research and innovation teams. You will build research agendas and lead teams that advance the scientific state of the art and drive innovation in Microsoft products. You will establish scientific processes, ensure relevance to business opportunities, communicate research findings, develop organizational expertise, and contribute to a culture of scientific innovation that will shape the future of productivity. 
+
+ 
+
+We are particularly interested in candidates who are passionate about (1) improving the performance of generative AI models to support human productivity, (2) enhancing user experiences in copilot systems, and (3) discovering simple, generalizable ideas that work well in practice and at scale. Candidates should have experience in one or more of the following technical areas: Artificial Intelligence, Natural Language Processing, Behavioral Modeling, Machine Learning, Computational Social Science, Data Science. Candidates should also have experience in the following leadership areas: research agenda setting, application of science to business strategy, people management, communication of scientific findings to a variety of audiences. 
+
+ 
+
+Microsoft’s mission is to empower every person and every organization on the planet to achieve more. As employees we come together with a growth mindset, innovate to empower others, and collaborate to realize our shared goals. Each day we build on our values of respect, integrity, and accountability to create a culture of inclusion where everyone can thrive at work and beyond.
+Qualifications
+
+Required Qualifications: 
+
+    Bachelor's Degree in Statistics, Econometrics, Computer Science, Electrical or Computer Engineering, or related field AND 8+ years related experience (e.g., statistics, predictive analytics, research)
+        OR Master's Degree in Statistics, Econometrics, Computer Science, Electrical or Computer Engineering, or related field AND 6+ years related experience (e.g., statistics, predictive analytics, research)
+        OR Doctorate in Statistics, Econometrics, Computer Science, Electrical or Computer Engineering, or related field AND 5+ years related experience (e.g., statistics, predictive analytics, research)
+        OR equivalent experience.
+    3+ years of people management experience.
+
+Other Requirements: 
+
+Candidates must be able to meet Microsoft, customer and/or government security screening requirements that are required for this role. These requirements include, but are not limited to the following specialized security screenings:  
+
+    Microsoft Cloud Background Check: This position will be required to pass the Microsoft Cloud background check upon hire/transfer and every two years thereafter.  
+
+Preferred Qualifications:  
+
+    Master's Degree in Statistics, Econometrics, Computer Science, Electrical or Computer Engineering, or related field AND 12+ years related experience (e.g., statistics, predictive analytics, research)
+        OR Doctorate in Statistics, Econometrics, Computer Science, Electrical or Computer Engineering, or related field AND 8+ years related experience (e.g., statistics, predictive analytics, research)
+        OR equivalent experience.
+    7+ years of people management experience.
+    3+ years experience presenting at conferences or other events in the outside research/industry community as an invited speaker.
+    10+ years experience leading technology research teams. 
+    Research ability demonstrated by an established publication record in top-tier venues. 
+    Participation and leadership in academic research communities demonstrated by paper reviewing, and program and conference chairing top-tier computer science conferences. 
+    Demonstrable ability to develop and shape original research agendas. 
+    Ability to lead multi-disciplinary teams, especially in high-paced technology environments. 
+    Passion for AI research and its ability to unlock human productivity and potential. 
+
+Applied Sciences M6 - The typical base pay range for this role across the U.S. is USD $161,600 - $286,200 per year. There is a different range applicable to specific work locations, within the San Francisco Bay area and New York City metropolitan area, and the base pay range for this role in those locations is USD $209,600 - $314,400 per year.
+
+Certain roles may be eligible for benefits and other compensation. Find additional benefits and pay information here: https://careers.microsoft.com/us/en/us-corporate-pay
+
+ 
+
+Microsoft will accept applications for the role until March 12, 2025.
+
+ 
+
+Responsibilities
+
+As Director of Applied Science, you will create scientific research agendas and lead multidisciplinary teams that undertake cutting-edge research and interface with product and business groups. Specifically, you will:  
+
+    Define research agendas, both long and short term, that advance science, improve Microsoft’s products, and directly or indirectly impact business opportunities. 
+    Guide execution of research agendas and subsequent applications, by establishing processes and quality metrics for problem articulation, methodological innovation, and presentation and publication of findings. 
+    Create pathways for the impact of scientific research through collaboration channels within Microsoft. 
+    Build a portfolio of artefacts to capture impact from scientific research, including peer-reviewed publication, white papers, other media publications such as blog posts, interactive dashboards, and prototypes. 
+    Promote Microsoft’s applied science work in broader research academic and other scientific communities. 
+    Ensure research team success through sufficient technical infrastructure, management of budget and legal considerations, and talent development and people management. 
+    Foster a culture of innovation fueled by intellectual curiosity and a passion for advancing human productivity with technology. 
+    Ensure research and resulting innovation technologies that uphold trustworthiness, robustness, privacy, values, and ethical considerations. 
+    Grow a collaborative partner network of researchers and practitioners across Microsoft. 
+
+Benefits/perks listed below may vary depending on the nature of your employment with Microsoft and the country where you work.
+Industry leading healthcare
+Educational resources
+Discounts on products and services
+Savings and investments
+Maternity and paternity leave
+Generous time away
+Giving programs
+Opportunities to network and connect

@@ -1,0 +1,32 @@
+{
+  "Skills": ["Python", "Data Analysis", "Leadership"],
+  "Education": [
+    {
+      "degree": "Master",
+      "field": ["Computer Science", "Data Science"]
+    },
+    {
+      "degree": "Bachelor",
+      "field": ["Engineering", "Business Administration"]
+    }
+  ],
+  "Experience": [
+    {
+      "years": "7+",
+      "skill": "Project Management"
+    },
+    {
+      "years": "3+",
+      "skill": "Data Engineering"
+    }
+  ],
+  "Certifications": ["PMP", "AWS Certified Solutions Architect", "Certified Data Scientist"],
+  "Location": ["New York", "San Francisco", "Remote"],
+  "Industry_Specific_Knowledge": ["Knowledge of GDPR regulations", "Experience in Oil and Gas sector"],
+  "Must_have_values": [
+    "MBA degree",
+    "10+ years of experience in finance",
+    "AWS Certified Solutions Architect",
+    "Proficiency in JavaScript"
+  ]
+}

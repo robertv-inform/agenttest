@@ -1,0 +1,219 @@
+{
+	"lang": "english",
+	"file": "file.pdf",
+	"lastModified": "2023-07-31T21:25",
+	"partialExtractionIndicator": "0",
+	"langCode": "en",
+	"personal": {
+		"title": "",
+		"firstName": "Candidate5",
+		"middleName": "",
+		"lastName": "GenAI",
+		"completeName": "Candidate5 GenAI",
+		"initials": "G.",
+		"birthDate": "",
+		"birthPlace": "",
+		"nationality": {
+			"code": "",
+			"description": ""
+		},
+		"gender": {
+			"code": "1",
+			"description": "Male"
+		},
+		"driversLicenses": [],
+		"address": {
+			"latitude": "",
+			"longitude": "",
+			"addressLine": "",
+			"street": "",
+			"number": "",
+			"postalCode": "",
+			"city": "Seattle",
+			"subRegion": {
+				"code": "",
+				"description": "Montgomery County"
+			},
+			"region": {
+				"code": "US-PA",
+				"description": "US Pennsylvania"
+			},
+			"country": {
+				"code": "US",
+				"description": "United States"
+			}
+		},
+		"phones": [
+			{
+				"number": "+14186820287",
+				"type": "mobile"
+			}
+		],
+		"emails": [
+			{
+				"email": "candidate5@ai.com"
+			}
+		],
+		"personalUrls": []
+	},
+	"summary": {
+		"totalExperienceYears": "7",
+		"totalExperienceMonths": "84",
+		"currentJob": "Director of Applied Science",
+		"currentEmployer": "Amazon",
+		"currentWorkField": {
+			"workFieldCode": "29",
+			"workFieldDescription": "IT R&D Professionals",
+			"experienceLevelCode": "CV_5_EXPERT",
+			"experienceLevelDescription": "Expert"
+		},
+		"highestDegree": {
+			"localCode": "US_3",
+			"localDescription": "Master",
+			"internationalCode": "4",
+			"internationalDescription": "Master",
+			"endDate": "2013-06-30"
+		},
+		"summaryAmbitionSection": "",
+		"extraCurricularSection": ""
+	},
+	"educationHistory": {
+		"degrees": [
+			{
+				"degreeName": "PhD in AI/ML",
+				"localCode": "US_3",
+				"localDescription": "PhD",
+				"internationalCode": "5",
+				"internationalDescription": "PhD",
+				"institute": "MIT",
+				"location": "Seattle",
+				"startDate": "2008-09-01",
+				"endDate": "2013-06-30",
+				"diplomaCode": "1",
+				"diplomaDescription": "Yes",
+				"description": "PhD in AI/ML MIT",
+				"itemId": "edu_0"
+			},
+			{
+				"degreeName": "Bachelor of Science in Artificial Intelligence",
+				"localCode": "US_4",
+				"localDescription": "Bachelor",
+				"internationalCode": "3",
+				"internationalDescription": "Bachelor",
+				"institute": "MIT",
+				"location": "Seattle",
+				"startDate": "2004-09-01",
+				"endDate": "2008-06-30",
+				"diplomaCode": "1",
+				"diplomaDescription": "Yes",
+				"description": "Bachelor of Science in AI MIT",
+				"itemId": "edu_1"
+			}
+		],
+		"courses": [],
+		"educationSection": "EDUCATION\nMaster's degree\nStatistics\nCarnegie Mellon University\n   2011 - 2013\n   Blue Bell, PA\n\nBachelor of Science\nStatistics\nCarnegie Mellon University\n   2007 - 2011\n   Pittsburgh, PA"
+	},
+	"employmentHistory": [
+		{
+			"jobTitle": "Principal Research Scientist",
+			"organization": "Amazon",
+			"location": "Seattle",
+			"startDate": "2018-01-01",
+			"endDate": "__NOWSTRING__",
+			"years": "6",
+			"months": "72",
+			"description": "Optimized human-AI collaboration in productivity tools",
+			"itemId": "exp_0"
+		},
+		{
+			"jobTitle": "Senior Machine Learning Scientist",
+			"organization": "Meta AI",
+			"location": "Seattle",
+			"startDate": "2014-01-01",
+			"endDate": "2018-01-01",
+			"years": "4",
+			"months": "48",
+			"description": "Worked on fine-tuning generative AI models for real-world applications.",
+			"itemId": "exp_1"
+		}
+	],
+	"skills": {
+		"computerSkills": [
+			{
+				"skill": "Generative AI",
+				"skillDescription": "Generative AI",
+				"years": "11",
+				"months": "79",
+				"last_used": "__NOWSTRING__"
+			},
+			{
+				"skill": "Natural Language Processing",
+				"skillDescription": "Natural Language Processing",
+				"years": "12",
+				"months": "63",
+				"last_used": "__NOWSTRING__"
+			},
+			{
+				"skill": "Machine Learning",
+				"skillDescription": "Machine Learning",
+				"years": "11",
+				"months": "103",
+				"last_used": "__NOWSTRING__"
+			},
+			{
+				"skill": "Computational Social Science",
+				"skillDescription": "Computational Social Science",
+				"years": "10",
+				"months": "62",
+				"last_used": "__NOWSTRING__"
+			},
+			{
+				"skill": "Deep Learning",
+				"skillDescription": "Deep Learning",
+				"years": "12",
+				"months": "80",
+				"last_used": "__NOWSTRING__"
+			},
+			{
+				"skill": "Data Science",
+				"skillDescription": "Data Science",
+				"years": "11",
+				"months": "115",
+				"last_used": "__NOWSTRING__"
+			},
+			{
+				"skill": "AI Ethics",
+				"skillDescription": "AI Ethics",
+				"years": "6",
+				"months": "71",
+				"last_used": "__NOWSTRING__"
+			}
+		]
+	},
+	"other": {
+		"hobbies": [],
+		"profilePicture": {}
+	},
+	"customArea": {
+		"extraInfo": {
+			"userExternalId": ""
+		},
+		"documentText": "CANDIDATE5 GENAI\n\nDirector of Applied Science at Amazon\n\n   candidate5@ai.com\n   +14186820287\n   Seattle, CA\n   LinkedIn\n\nEDUCATION\nPhD in AI/ML\nMIT\n   2008 - 2013\n   Seattle, CA\n\nSKILLS\n  Generative AI, Natural Language Processing, Machine Learning, Computational Social Science, Deep Learning, Data Science, AI Ethics\n\nEXPERIENCE\nDirector of Applied Science\nAmazon\n   2018 - Present            Seattle, CA\n     Optimized human-AI collaboration in productivity tools\n\nSenior Machine Learning Scientist\nDeepMind \n   2014 - 2018           Seattle, CA\n     Worked on fine-tuning generative AI models for real-world applications.\n"
+	},
+	"projects": [],
+	"publications": [],
+	"trainings": [],
+	"languages": [],
+	"certifications": [
+		{
+			"name": "AWS Certified Machine Learning – Specialty",
+			"issuer": "Amazon AWS",
+			"year": "2021"
+		},
+		{
+			"name": "Microsoft Certified: Azure AI Engineer Associate",
+			"issuer": "Microsoft",
+			"year": "2022"
+		}
+	]
+}

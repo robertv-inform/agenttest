@@ -1,0 +1,219 @@
+{
+	"lang": "english",
+	"file": "file.pdf",
+	"lastModified": "2023-07-31T21:25",
+	"partialExtractionIndicator": "0",
+	"langCode": "en",
+	"personal": {
+		"title": "",
+		"firstName": "Candidate3",
+		"middleName": "",
+		"lastName": "GenAI",
+		"completeName": "Candidate3 GenAI",
+		"initials": "G.",
+		"birthDate": "",
+		"birthPlace": "",
+		"nationality": {
+			"code": "",
+			"description": ""
+		},
+		"gender": {
+			"code": "1",
+			"description": "Male"
+		},
+		"driversLicenses": [],
+		"address": {
+			"latitude": "",
+			"longitude": "",
+			"addressLine": "",
+			"street": "",
+			"number": "",
+			"postalCode": "",
+			"city": "Seattle",
+			"subRegion": {
+				"code": "",
+				"description": "Montgomery County"
+			},
+			"region": {
+				"code": "US-PA",
+				"description": "US Pennsylvania"
+			},
+			"country": {
+				"code": "US",
+				"description": "United States"
+			}
+		},
+		"phones": [
+			{
+				"number": "+19873829574",
+				"type": "mobile"
+			}
+		],
+		"emails": [
+			{
+				"email": "candidate3@ai.com"
+			}
+		],
+		"personalUrls": []
+	},
+	"summary": {
+		"totalExperienceYears": "11",
+		"totalExperienceMonths": "132",
+		"currentJob": "Director of Applied Science",
+		"currentEmployer": "Microsoft",
+		"currentWorkField": {
+			"workFieldCode": "29",
+			"workFieldDescription": "IT R&D Professionals",
+			"experienceLevelCode": "CV_5_EXPERT",
+			"experienceLevelDescription": "Expert"
+		},
+		"highestDegree": {
+			"localCode": "US_3",
+			"localDescription": "Master",
+			"internationalCode": "4",
+			"internationalDescription": "Master",
+			"endDate": "2013-06-30"
+		},
+		"summaryAmbitionSection": "",
+		"extraCurricularSection": ""
+	},
+	"educationHistory": {
+		"degrees": [
+			{
+				"degreeName": "Master's in AI",
+				"localCode": "US_3",
+				"localDescription": "Master",
+				"internationalCode": "4",
+				"internationalDescription": "Master",
+				"institute": "CMU",
+				"location": "Seattle",
+				"startDate": "2008-09-01",
+				"endDate": "2011-06-30",
+				"diplomaCode": "1",
+				"diplomaDescription": "Yes",
+				"description": "Master's in AI CMU",
+				"itemId": "edu_0"
+			},
+			{
+				"degreeName": "Bachelor of Science in Artificial Intelligence",
+				"localCode": "US_4",
+				"localDescription": "Bachelor",
+				"internationalCode": "3",
+				"internationalDescription": "Bachelor",
+				"institute": "CMU",
+				"location": "Seattle",
+				"startDate": "2004-09-01",
+				"endDate": "2008-06-30",
+				"diplomaCode": "1",
+				"diplomaDescription": "Yes",
+				"description": "Bachelor of Science in AI CMU",
+				"itemId": "edu_1"
+			}
+		],
+		"courses": [],
+		"educationSection": "EDUCATION\nMaster's degree\nStatistics\nCarnegie Mellon University\n   2011 - 2013\n   Blue Bell, PA\n\nBachelor of Science\nStatistics\nCarnegie Mellon University\n   2007 - 2011\n   Pittsburgh, PA"
+	},
+	"employmentHistory": [
+		{
+			"jobTitle": "Principal Research Scientist",
+			"organization": "Microsoft",
+			"location": "Seattle",
+			"startDate": "2018-01-01",
+			"endDate": "__NOWSTRING__",
+			"years": "6",
+			"months": "72",
+			"description": "Led AI alignment and fine-tuning research",
+			"itemId": "exp_0"
+		},
+		{
+			"jobTitle": "Senior Machine Learning Scientist",
+			"organization": "DeepMind",
+			"location": "Seattle",
+			"startDate": "2014-01-01",
+			"endDate": "2018-01-01",
+			"years": "4",
+			"months": "48",
+			"description": "Worked on fine-tuning generative AI models for real-world applications.",
+			"itemId": "exp_1"
+		}
+	],
+	"skills": {
+		"computerSkills": [
+			{
+				"skill": "Generative AI",
+				"skillDescription": "Generative AI",
+				"years": "6",
+				"months": "124",
+				"last_used": "__NOWSTRING__"
+			},
+			{
+				"skill": "Natural Language Processing",
+				"skillDescription": "Natural Language Processing",
+				"years": "7",
+				"months": "67",
+				"last_used": "__NOWSTRING__"
+			},
+			{
+				"skill": "Machine Learning",
+				"skillDescription": "Machine Learning",
+				"years": "11",
+				"months": "134",
+				"last_used": "__NOWSTRING__"
+			},
+			{
+				"skill": "Computational Social Science",
+				"skillDescription": "Computational Social Science",
+				"years": "5",
+				"months": "81",
+				"last_used": "__NOWSTRING__"
+			},
+			{
+				"skill": "Deep Learning",
+				"skillDescription": "Deep Learning",
+				"years": "7",
+				"months": "133",
+				"last_used": "__NOWSTRING__"
+			},
+			{
+				"skill": "Data Science",
+				"skillDescription": "Data Science",
+				"years": "8",
+				"months": "67",
+				"last_used": "__NOWSTRING__"
+			},
+			{
+				"skill": "AI Ethics",
+				"skillDescription": "AI Ethics",
+				"years": "11",
+				"months": "91",
+				"last_used": "__NOWSTRING__"
+			}
+		]
+	},
+	"other": {
+		"hobbies": [],
+		"profilePicture": {}
+	},
+	"customArea": {
+		"extraInfo": {
+			"userExternalId": ""
+		},
+		"documentText": "CANDIDATE3 GENAI\n\nDirector of Applied Science at Microsoft\n\n   candidate3@ai.com\n   +19873829574\n   Seattle, CA\n   LinkedIn\n\nEDUCATION\nMaster's in AI\nCMU\n   2008 - 2013\n   Seattle, CA\n\nSKILLS\n  Generative AI, Natural Language Processing, Machine Learning, Computational Social Science, Deep Learning, Data Science, AI Ethics\n\nEXPERIENCE\nDirector of Applied Science\nMicrosoft\n   2018 - Present            Seattle, CA\n     Led AI alignment and fine-tuning research\n\nSenior Machine Learning Scientist\nDeepMind \n   2014 - 2018           Seattle, CA\n     Worked on fine-tuning generative AI models for real-world applications.\n"
+	},
+	"projects": [],
+	"publications": [],
+	"trainings": [],
+	"languages": [],
+	"certifications": [
+		{
+			"name": "AWS Certified Machine Learning – Specialty",
+			"issuer": "Amazon AWS",
+			"year": "2021"
+		},
+		{
+			"name": "Microsoft Certified: Azure AI Engineer Associate",
+			"issuer": "Microsoft",
+			"year": "2022"
+		}
+	]
+}

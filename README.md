@@ -1,3 +1,142 @@
 # agenttest
 # conversation agent code
 
+import asyncio
+import openai
+import logging
+import csv
+import json
+import time
+
+# ----------------------------
+# Config
+# ----------------------------
+openai.api_key = "your-openai-api-key"
+logging.basicConfig(level=logging.INFO)
+batch_size = 2  # How many employees per GPT call
+
+# ----------------------------
+# Input Data
+# ----------------------------
+profile_id = "job123"
+profile_certs = [
+    "Certified Personal Trainer",
+    "AWS Certified Solutions Architect",
+    "CPR Certification"
+]
+employee_cert_data = {
+    "emp1": ["CPT", "cert pers trainer", "CAFM"],
+    "emp2": ["AWS Solutions Architect Associate", "CPR", "Tester"],
+    "emp3": ["Trainer", "Certified Fitness Coach"],
+    "emp4": ["CPM", "CPR Training"],
+    "emp5": ["Basic First Aid", "Professional Certified Marketer"]
+}
+
+# ----------------------------
+# Prompt Builder (Multi-Cert)
+# ----------------------------
+def build_prompt(profile_certs, job_profile_id, emp_certs_dict):
+    profile_list = "\n".join(f"- {cert}" for cert in profile_certs)
+    emp_block = "\n".join(f"{eid}: {certs}" for eid, certs in emp_certs_dict.items())
+    return f"""
+You are an AI assistant for certification matching.
+
+Job Profile ID: "{job_profile_id}"
+
+Job Profile Certifications:
+{profile_list}
+
+Below are certifications from different employees:
+{emp_block}
+
+Instruction:
+For each employee, compare every job profile certification against the employee's certifications.
+For each profile certification, find the best match from the employee's list.
+If no match (≥90% semantic similarity) is found, mark as "no match found".
+
+Return in this JSON format:
+[
+  {{
+    "job_profile_id": "<job_profile_id>",
+    "employee_id": "<employee_id>",
+    "matches": {{
+      "<profile_cert1>": "<best_match or no match found>",
+      "<profile_cert2>": "<best_match or no match found>",
+      ...
+    }}
+  }},
+  ...
+]
+""".strip()
+
+# ----------------------------
+# GPT Call with Retry
+# ----------------------------
+async def call_gpt(prompt, retries=3):
+    for attempt in range(1, retries + 1):
+        try:
+            response = await openai.ChatCompletion.acreate(
+                model="gpt-4",
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0
+            )
+            result = response["choices"][0]["message"]["content"]
+            return json.loads(result)
+        except Exception as e:
+            logging.warning(f"Attempt {attempt} failed: {e}")
+            time.sleep(2 * attempt)
+    logging.error("GPT call failed after retries.")
+    return []
+
+# ----------------------------
+# Batching Employees
+# ----------------------------
+def get_batches(data_dict, batch_size):
+    items = list(data_dict.items())
+    return [dict(items[i:i + batch_size]) for i in range(0, len(items), batch_size)]
+
+# ----------------------------
+# Save to CSV
+# ----------------------------
+def save_to_csv(data, filename="multi_cert_matches.csv"):
+    all_profile_keys = set()
+    for row in data:
+        all_profile_keys.update(row["matches"].keys())
+
+    fieldnames = ["job_profile_id", "employee_id"] + sorted(all_profile_keys)
+
+    with open(filename, "w", newline='', encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in data:
+            base = {
+                "job_profile_id": row["job_profile_id"],
+                "employee_id": row["employee_id"]
+            }
+            base.update(row["matches"])
+            writer.writerow(base)
+    logging.info(f"Saved results to {filename}")
+
+# ----------------------------
+# Main Async Function
+# ----------------------------
+async def main():
+    all_results = []
+
+    batches = get_batches(employee_cert_data, batch_size)
+
+    for idx, batch in enumerate(batches, 1):
+        logging.info(f"Processing batch {idx} with {len(batch)} employees")
+        prompt = build_prompt(profile_certs, profile_id, batch)
+        result = await call_gpt(prompt)
+        all_results.extend(result)
+
+    save_to_csv(all_results)
+
+# ----------------------------
+# Run
+# ----------------------------
+if __name__ == "__main__":
+    asyncio.run(main())
+
+
